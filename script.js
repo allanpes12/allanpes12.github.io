@@ -52,6 +52,34 @@ const projects = [
     privateReason: "Repositório mantido privado por conter chaves, certificado de assinatura e integrações comerciais."
   },
   {
+    title: "Webservice Node.js V2",
+    category: "Backend",
+    description: "API Node.js/Express V2 para operação integrada ao ERP, com autenticação, multiempresa, rotas modulares e documentação de endpoints.",
+    problem: "A aplicação precisava de uma camada backend independente, mais organizada e segura, sem depender de headers sensíveis de banco enviados pelo frontend.",
+    solution: "Backend V2 com bootstrap de empresa, login, resolução de tenant no servidor, JWT, controllers/models por domínio e rotas para clientes, produtos, pedidos, comandas, recebíveis e parâmetros.",
+    technologies: ["Node.js", "Express", "MySQL", "Knex", "JWT", "Swagger/OpenAPI", "PM2", "Nginx"],
+    status: "Projeto privado",
+    image: "assets/projects/webservice-nodejs-v2.png",
+    repositoryUrl: "",
+    demoUrl: "",
+    featured: true,
+    privateReason: "Repositório privado por conter arquitetura de backend, autenticação, deploy e regras de integração com ERP."
+  },
+  {
+    title: "LogicaMobileGO Flutter V2",
+    category: "Mobile",
+    description: "Base Flutter 2.0 do LogicaMobileGO com refatoração incremental por features, centralização de sessão, HTTP, carrinho, pedidos, clientes, produtos, recebíveis e pagamento.",
+    problem: "A base mobile possuía telas grandes, regras espalhadas, chamadas HTTP diretas e dependência de estado global, dificultando manutenção e evolução segura.",
+    solution: "Reestruturação arquitetural com camadas app/core/features/shared, repositories por domínio, controllers, contratos tipados, testes smoke e remoção gradual de wrappers legados.",
+    technologies: ["Flutter", "Dart", "Provider", "HTTP", "SharedPreferences", "JWT", "PDF/Printing", "Arquitetura por features"],
+    status: "Projeto privado",
+    image: "assets/projects/logicamobilego-v2.png",
+    repositoryUrl: "",
+    demoUrl: "",
+    featured: true,
+    privateReason: "Repositório privado por conter configurações, assinatura do app e regras comerciais internas."
+  },
+  {
     title: "Promo Bot",
     category: "Backend",
     description: "Bot Node.js para busca, ranqueamento, formatação e envio de promoções em canais como Telegram e WhatsApp, com deduplicação e integrações de marketplaces.",

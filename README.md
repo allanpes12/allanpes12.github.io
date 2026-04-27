@@ -26,6 +26,8 @@ O site destaca experiência prática em sistemas corporativos, ambiente hospital
         ├── app-rl-ponto.png
         ├── inventario-ti.png
         ├── logicamobilego.png
+        ├── webservice-nodejs-v2.png
+        ├── logicamobilego-v2.png
         ├── promo-bot.png
         ├── promo-site.png
         └── app-card.png
