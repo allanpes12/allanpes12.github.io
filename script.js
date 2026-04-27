@@ -10,69 +10,88 @@
 // ============================================================
 const projects = [
   {
-    title: "App de Inventário com Google Sheets e Drive",
-    category: "Mobile",
-    description: "Aplicativo Flutter para coleta de inventário patrimonial, envio de dados para Google Sheets e upload de fotos para Google Drive.",
-    problem: "Processo manual de registro de inventário, com risco de retrabalho e perda de informações.",
-    solution: "Aplicativo mobile integrado ao Google Sheets e Google Drive, facilitando a coleta, organização e consulta das informações.",
-    technologies: ["Flutter", "Dart", "Google Sheets API", "Google Drive API", "OAuth", "Google Cloud"],
-    status: "Em uso / Projeto interno",
-    image: "assets/projects/inventario.png",
-    repositoryUrl: "",
-    demoUrl: "",
-    featured: true
-  },
-  {
-    title: "App para RH — Impressão de Crachás",
+    title: "App RL Ponto",
     category: "Automação",
-    description: "Solução criada sob demanda para facilitar a impressão de imagens de crachás do setor de RH.",
-    problem: "Processo manual e repetitivo para localizar, organizar e imprimir imagens de crachás.",
-    solution: "Aplicação simples para agilizar a seleção e impressão das imagens, reduzindo retrabalho operacional.",
-    technologies: ["Flutter", "Dart", "Automação de processos", "Interface interna"],
+    description: "Aplicação Flutter para coleta, organização e conferência de registros de relógios de ponto, com leitura de AFD, enriquecimento de usuários e exportação de dados.",
+    problem: "Rotinas de ponto exigiam conferência manual, tratamento de arquivos e validação de registros com risco de erro operacional.",
+    solution: "Interface interna para centralizar coleta, histórico, logs, configuração de equipamentos, cruzamento de identificadores e exportação de informações.",
+    technologies: ["Flutter", "Dart", "Windows", "AFD", "API Control iD", "JSON local", "Automação"],
+    status: "Repositório privado",
+    image: "assets/projects/app-rl-ponto.png",
+    repositoryUrl: "",
+    demoUrl: "",
+    featured: true,
+    privateReason: "Repositório privado por envolver integrações e rotinas internas."
+  },
+  {
+    title: "Inventário TI",
+    category: "Mobile",
+    description: "Aplicativo Flutter para coleta de inventário patrimonial, leitura de QR Code, envio de dados para Google Sheets e apoio ao controle de ativos.",
+    problem: "Processo manual de registro de inventário, com risco de retrabalho, perda de informações e dificuldade de conferência em campo.",
+    solution: "Aplicativo mobile integrado a planilhas, autenticação Google e armazenamento local para facilitar coleta, organização, validação e consulta das informações.",
+    technologies: ["Flutter", "Dart", "Google Sheets API", "Google Drive API", "OAuth", "QR Code", "Google Cloud"],
     status: "Projeto interno",
-    image: "assets/projects/rh-crachas.png",
+    image: "assets/projects/inventario-ti.png",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true
+    featured: true,
+    privateReason: "Repositório privado por conter configuração de integração Google e dados operacionais."
   },
   {
-    title: "PromoTinners",
-    category: "Web",
-    description: "Plataforma de divulgação de promoções com site, backend, encurtador de links e integração com canais de envio.",
-    problem: "Necessidade de centralizar promoções, gerar links rastreáveis e automatizar publicação em canais.",
-    solution: "Site com backend Node.js, banco de dados, API REST, links curtos e integração com WhatsApp/Telegram.",
-    technologies: ["Node.js", "Express", "Next.js", "MySQL", "Prisma", "PM2", "Cloudflare"],
-    status: "Em desenvolvimento",
-    image: "assets/projects/promotinners.png",
+    title: "LogicaMobileGO Flutter - branch Pos_add",
+    category: "Mobile",
+    description: "Modificações na branch Pos_add do LogicaMobileGO Flutter para adaptação do aplicativo a máquinas de cartão de crédito/POS, com foco em fluxo de pagamento e operação comercial.",
+    problem: "O aplicativo precisava atender cenários de venda com máquina de cartão, integrando o fluxo mobile ao processo comercial sem quebrar a operação já existente.",
+    solution: "Evolução específica da branch Pos_add com telas, modelos e integrações voltadas ao checkout, pagamento e uso em dispositivos POS/maquininhas.",
+    technologies: ["Flutter", "Dart", "ERP", "APIs REST", "Cielo Smart POS", "Webservices", "Mobile"],
+    status: "Projeto privado",
+    image: "assets/projects/logicamobilego.png",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true
+    featured: true,
+    privateReason: "Repositório mantido privado por conter chaves, certificado de assinatura e integrações comerciais."
   },
   {
-    title: "TinnersERP",
+    title: "Promo Bot",
     category: "Backend",
-    description: "ERP em desenvolvimento com módulos de clientes, produtos, vendas, estoque, financeiro e estrutura fiscal.",
-    problem: "Necessidade de uma solução modular para gestão empresarial com suporte a multiempresa e multifilial.",
-    solution: "Backend estruturado com NestJS, MySQL, autenticação JWT, permissões e módulos de negócio.",
-    technologies: ["NestJS", "TypeScript", "MySQL", "Drizzle ORM", "JWT", "Swagger", "Flutter"],
-    status: "Em desenvolvimento",
-    image: "assets/projects/tinnerserp.png",
+    description: "Bot Node.js para busca, ranqueamento, formatação e envio de promoções em canais como Telegram e WhatsApp, com deduplicação e integrações de marketplaces.",
+    problem: "Era necessário automatizar a captura de ofertas, converter links, evitar promoções repetidas e publicar cards em múltiplos canais.",
+    solution: "Pipeline com scrapers, conversores, cache de envios, formatação de mensagens, filas e conectores para Telegram/WhatsApp.",
+    technologies: ["Node.js", "JavaScript", "Telegram Bot API", "WPPConnect", "Scraping", "Automação", "APIs"],
+    status: "Projeto privado",
+    image: "assets/projects/promo-bot.png",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true
+    featured: true,
+    privateReason: "Repositório privado por envolver tokens, canais e configurações de operação."
   },
   {
-    title: "Consultas SQL e Automações Hospitalares",
-    category: "Hospitalar",
-    description: "Criação de consultas SQL, análises de dados e automações para apoio a rotinas administrativas e assistenciais em ambiente hospitalar.",
-    problem: "Necessidade de investigar inconsistências, conferir dados e apoiar decisões operacionais com informações confiáveis.",
-    solution: "Consultas SQL, análise de tabelas, validações e apoio técnico respeitando segurança e privacidade dos dados.",
-    technologies: ["Oracle SQL", "MV Soul", "MVPEP", "Banco de Dados", "Análise de Sistemas"],
-    status: "Experiência profissional",
-    image: "assets/projects/sql-hospitalar.png",
+    title: "Promo Site",
+    category: "Web",
+    description: "Plataforma web para divulgação de promoções com frontend, backend, API pública, autenticação por chave, encurtamento e redirecionamento de links.",
+    problem: "As promoções precisavam de uma vitrine centralizada, URLs rastreáveis, API para cadastro e estrutura para publicação automatizada.",
+    solution: "Site com backend Node.js/Express, frontend Next.js, banco MySQL/Prisma, documentação OpenAPI e rotas de promoção, categoria e redirecionamento.",
+    technologies: ["Node.js", "Express", "Next.js", "MySQL", "Prisma", "OpenAPI", "Cloudflare"],
+    status: "Em desenvolvimento",
+    image: "assets/projects/promo-site.png",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true
+    featured: true,
+    privateReason: "Repositório privado por conter estrutura de API, chaves de publicação e configurações de deploy."
+  },
+  {
+    title: "App Card",
+    category: "Automação",
+    description: "Aplicativo Flutter para edição visual, montagem e impressão de cartões/crachás com templates, campos de texto, imagens, códigos de barras e pré-visualização.",
+    problem: "Processos de criação e impressão de crachás exigiam ajuste manual, repetição de layout e pouca padronização.",
+    solution: "Editor interno com elementos arrastáveis e redimensionáveis, armazenamento de layout e serviço de impressão para agilizar a produção.",
+    technologies: ["Flutter", "Dart", "Impressão", "Templates", "Barcode", "Automação de processos"],
+    status: "Projeto interno",
+    image: "assets/projects/app-card.png",
+    repositoryUrl: "",
+    demoUrl: "",
+    featured: true,
+    privateReason: "Projeto interno, sem exposição de modelos, dados ou layouts reais de identificação."
   }
 ];
 
@@ -187,7 +206,7 @@ function createProjectCard(project) {
   }
 
   if (!project.repositoryUrl && !project.demoUrl) {
-    links.appendChild(createElement("span", "", "Projeto interno ou privado"));
+    links.appendChild(createElement("span", "", project.privateReason || "Projeto interno ou privado"));
   }
 
   body.append(meta, title, description, problem, solution, technologies, links);

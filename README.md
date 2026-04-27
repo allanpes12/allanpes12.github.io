@@ -23,11 +23,12 @@ O site destaca experiência prática em sistemas corporativos, ambiente hospital
 └── assets/
     ├── profile.jpg
     └── projects/
-        ├── inventario.png
-        ├── rh-crachas.png
-        ├── promotinners.png
-        ├── tinnerserp.png
-        └── sql-hospitalar.png
+        ├── app-rl-ponto.png
+        ├── inventario-ti.png
+        ├── logicamobilego.png
+        ├── promo-bot.png
+        ├── promo-site.png
+        └── app-card.png
 ```
 
 ## Como editar os projetos
@@ -47,6 +48,7 @@ Cada projeto usa os campos:
 - `repositoryUrl`: link do repositório, quando público
 - `demoUrl`: link de demonstração, quando existir
 - `featured`: destaque visual no card
+- `privateReason`: texto exibido quando o projeto não tem link público
 
 Para adicionar um novo projeto, copie um objeto existente no array `projects`, cole abaixo e altere os dados.
 
@@ -91,3 +93,9 @@ Adicione o PDF nesse caminho ou altere o link no `index.html`.
 ## Observação sobre projetos hospitalares
 
 Projetos e experiências ligados ao ambiente hospitalar devem usar descrições genéricas, dados fictícios e não devem expor nomes de pacientes, telas internas, credenciais, regras sigilosas ou informações sensíveis.
+
+## Observação sobre repositórios privados
+
+Os projetos listados no portfólio podem permanecer sem link público quando contiverem credenciais, certificados, tokens, chaves de integração, URLs internas, dados operacionais ou regras de negócio sensíveis.
+
+Antes de publicar qualquer repositório privado, crie uma cópia sanitizada, remova dados sensíveis e substitua configurações reais por exemplos como `.env.example`.
