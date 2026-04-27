@@ -837,12 +837,17 @@ button {
 }
 
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js-enabled .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 500ms ease, transform 500ms ease;
 }
 
-.reveal.is-visible {
+.js-enabled .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
