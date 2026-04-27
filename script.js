@@ -1,129 +1,96 @@
-
 // ============================================================
-// Projetos do portfolio
-// Edite este array para adicionar, remover ou alterar projetos.
-// Campos esperados:
-// title, category, description, problem, solution, technologies,
-// status, image, repositoryUrl, demoUrl e featured.
-// Para projetos hospitalares, use descricoes genericas e nunca exponha
-// dados sensiveis, nomes de pacientes ou telas internas.
+// Projetos do portfólio
+// Edite este array para adicionar, remover ou ajustar projetos.
+//
+// Campos usados pelos cards:
+// title, category, icon, description, problem, solution,
+// technologies, status, repositoryUrl, demoUrl e featured.
+//
+// Para projetos hospitalares, use descrições genéricas e nunca exponha
+// dados sensíveis, nomes de pacientes, prints internos ou telas do MV.
 // ============================================================
 const projects = [
   {
-    title: "App RL Ponto",
-    category: "Automação",
-    description: "Aplicação Flutter para coleta, organização e conferência de registros de relógios de ponto, com leitura de AFD, enriquecimento de usuários e exportação de dados.",
-    problem: "Rotinas de ponto exigiam conferência manual, tratamento de arquivos e validação de registros com risco de erro operacional.",
-    solution: "Interface interna para centralizar coleta, histórico, logs, configuração de equipamentos, cruzamento de identificadores e exportação de informações.",
-    technologies: ["Flutter", "Dart", "Windows", "AFD", "API Control iD", "JSON local", "Automação"],
-    status: "Repositório privado",
-    image: "assets/projects/app-rl-ponto.png",
+    title: "Consultas SQL para Etiquetas Hospitalares",
+    category: "Hospitalar",
+    icon: "🏥",
+    description: "Ajuste e desenvolvimento de consultas SQL utilizadas em relatórios e etiquetas hospitalares no Report Designer.",
+    problem: "Necessidade de corrigir, validar ou melhorar informações exibidas em etiquetas e relatórios utilizados em rotinas hospitalares.",
+    solution: "Análise das tabelas envolvidas, revisão de joins, filtros, campos calculados e regras de exibição no Report Designer, respeitando a estrutura dos sistemas MV e a privacidade dos dados.",
+    technologies: ["Oracle SQL", "MV Soul", "MVPEP", "Report Designer", "Banco de Dados", "Relatórios Hospitalares"],
+    status: "Experiência profissional",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true,
-    privateReason: "Repositório privado por envolver integrações e rotinas internas."
+    featured: true
   },
   {
-    title: "Inventário TI",
+    title: "App de Inventário com Google Sheets e Drive",
     category: "Mobile",
-    description: "Aplicativo Flutter para coleta de inventário patrimonial, leitura de QR Code, envio de dados para Google Sheets e apoio ao controle de ativos.",
-    problem: "Processo manual de registro de inventário, com risco de retrabalho, perda de informações e dificuldade de conferência em campo.",
-    solution: "Aplicativo mobile integrado a planilhas, autenticação Google e armazenamento local para facilitar coleta, organização, validação e consulta das informações.",
-    technologies: ["Flutter", "Dart", "Google Sheets API", "Google Drive API", "OAuth", "QR Code", "Google Cloud"],
+    icon: "📱",
+    description: "Aplicativo Flutter para coleta de inventário patrimonial, envio de dados para Google Sheets e upload de fotos para Google Drive.",
+    problem: "Processo manual de registro de inventário, com risco de retrabalho, perda de informações e dificuldade de organização.",
+    solution: "Aplicativo mobile integrado ao Google Sheets e Google Drive, facilitando a coleta, organização e consulta das informações.",
+    technologies: ["Flutter", "Dart", "Google Sheets API", "Google Drive API", "OAuth", "Google Cloud"],
     status: "Projeto interno",
-    image: "assets/projects/inventario-ti.png",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true,
-    privateReason: "Repositório privado por conter configuração de integração Google e dados operacionais."
+    featured: true
   },
   {
-    title: "LogicaMobileGO Flutter - branch Pos_add",
-    category: "Mobile",
-    description: "Modificações na branch Pos_add do LogicaMobileGO Flutter para adaptação do aplicativo a máquinas de cartão de crédito/POS, com foco em fluxo de pagamento e operação comercial.",
-    problem: "O aplicativo precisava atender cenários de venda com máquina de cartão, integrando o fluxo mobile ao processo comercial sem quebrar a operação já existente.",
-    solution: "Evolução específica da branch Pos_add com telas, modelos e integrações voltadas ao checkout, pagamento e uso em dispositivos POS/maquininhas.",
-    technologies: ["Flutter", "Dart", "ERP", "APIs REST", "Cielo Smart POS", "Webservices", "Mobile"],
-    status: "Projeto privado",
-    image: "assets/projects/logicamobilego.png",
+    title: "App para RH — Impressão de Crachás",
+    category: "Automação",
+    icon: "🪪",
+    description: "Solução criada sob demanda para facilitar a organização e impressão de imagens de crachás.",
+    problem: "Processo manual e repetitivo para localizar, organizar e imprimir imagens de crachás.",
+    solution: "Aplicação simples para agilizar a seleção e impressão das imagens, reduzindo retrabalho operacional.",
+    technologies: ["Flutter", "Dart", "Automação de Processos", "Interface Interna"],
+    status: "Projeto interno",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true,
-    privateReason: "Repositório mantido privado por conter chaves, certificado de assinatura e integrações comerciais."
+    featured: true
   },
   {
-    title: "Webservice Node.js V2",
-    category: "Backend",
-    description: "API Node.js/Express V2 para operação integrada ao ERP, com autenticação, multiempresa, rotas modulares e documentação de endpoints.",
-    problem: "A aplicação precisava de uma camada backend independente, mais organizada e segura, sem depender de headers sensíveis de banco enviados pelo frontend.",
-    solution: "Backend V2 com bootstrap de empresa, login, resolução de tenant no servidor, JWT, controllers/models por domínio e rotas para clientes, produtos, pedidos, comandas, recebíveis e parâmetros.",
-    technologies: ["Node.js", "Express", "MySQL", "Knex", "JWT", "Swagger/OpenAPI", "PM2", "Nginx"],
-    status: "Projeto privado",
-    image: "assets/projects/webservice-nodejs-v2.png",
-    repositoryUrl: "",
-    demoUrl: "",
-    featured: true,
-    privateReason: "Repositório privado por conter arquitetura de backend, autenticação, deploy e regras de integração com ERP."
-  },
-  {
-    title: "LogicaMobileGO Flutter V2",
-    category: "Mobile",
-    description: "Base Flutter 2.0 do LogicaMobileGO com refatoração incremental por features, centralização de sessão, HTTP, carrinho, pedidos, clientes, produtos, recebíveis e pagamento.",
-    problem: "A base mobile possuía telas grandes, regras espalhadas, chamadas HTTP diretas e dependência de estado global, dificultando manutenção e evolução segura.",
-    solution: "Reestruturação arquitetural com camadas app/core/features/shared, repositories por domínio, controllers, contratos tipados, testes smoke e remoção gradual de wrappers legados.",
-    technologies: ["Flutter", "Dart", "Provider", "HTTP", "SharedPreferences", "JWT", "PDF/Printing", "Arquitetura por features"],
-    status: "Projeto privado",
-    image: "assets/projects/logicamobilego-v2.png",
-    repositoryUrl: "",
-    demoUrl: "",
-    featured: true,
-    privateReason: "Repositório privado por conter configurações, assinatura do app e regras comerciais internas."
-  },
-  {
-    title: "Promo Bot",
-    category: "Backend",
-    description: "Bot Node.js para busca, ranqueamento, formatação e envio de promoções em canais como Telegram e WhatsApp, com deduplicação e integrações de marketplaces.",
-    problem: "Era necessário automatizar a captura de ofertas, converter links, evitar promoções repetidas e publicar cards em múltiplos canais.",
-    solution: "Pipeline com scrapers, conversores, cache de envios, formatação de mensagens, filas e conectores para Telegram/WhatsApp.",
-    technologies: ["Node.js", "JavaScript", "Telegram Bot API", "WPPConnect", "Scraping", "Automação", "APIs"],
-    status: "Projeto privado",
-    image: "assets/projects/promo-bot.png",
-    repositoryUrl: "",
-    demoUrl: "",
-    featured: true,
-    privateReason: "Repositório privado por envolver tokens, canais e configurações de operação."
-  },
-  {
-    title: "Promo Site",
+    title: "PromoTinners",
     category: "Web",
-    description: "Plataforma web para divulgação de promoções com frontend, backend, API pública, autenticação por chave, encurtamento e redirecionamento de links.",
-    problem: "As promoções precisavam de uma vitrine centralizada, URLs rastreáveis, API para cadastro e estrutura para publicação automatizada.",
-    solution: "Site com backend Node.js/Express, frontend Next.js, banco MySQL/Prisma, documentação OpenAPI e rotas de promoção, categoria e redirecionamento.",
-    technologies: ["Node.js", "Express", "Next.js", "MySQL", "Prisma", "OpenAPI", "Cloudflare"],
+    icon: "🛒",
+    description: "Plataforma de divulgação de promoções com site, backend, encurtador de links e integração com canais de envio.",
+    problem: "Necessidade de centralizar promoções, gerar links rastreáveis e automatizar a publicação em canais.",
+    solution: "Site com backend Node.js, banco de dados, API REST, links curtos e integração com WhatsApp/Telegram.",
+    technologies: ["Node.js", "Express", "Next.js", "MySQL", "Prisma", "PM2", "Cloudflare"],
     status: "Em desenvolvimento",
-    image: "assets/projects/promo-site.png",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true,
-    privateReason: "Repositório privado por conter estrutura de API, chaves de publicação e configurações de deploy."
+    featured: false
   },
   {
-    title: "App Card",
-    category: "Automação",
-    description: "Aplicativo Flutter para edição visual, montagem e impressão de cartões/crachás com templates, campos de texto, imagens, códigos de barras e pré-visualização.",
-    problem: "Processos de criação e impressão de crachás exigiam ajuste manual, repetição de layout e pouca padronização.",
-    solution: "Editor interno com elementos arrastáveis e redimensionáveis, armazenamento de layout e serviço de impressão para agilizar a produção.",
-    technologies: ["Flutter", "Dart", "Impressão", "Templates", "Barcode", "Automação de processos"],
-    status: "Projeto interno",
-    image: "assets/projects/app-card.png",
+    title: "TinnersERP",
+    category: "Backend",
+    icon: "🧩",
+    description: "ERP em desenvolvimento com módulos de clientes, produtos, vendas, estoque, financeiro e estrutura fiscal.",
+    problem: "Necessidade de uma solução modular para gestão empresarial com suporte a multiempresa e multifilial.",
+    solution: "Backend estruturado com NestJS, MySQL, autenticação JWT, permissões e módulos de negócio.",
+    technologies: ["NestJS", "TypeScript", "MySQL", "Drizzle ORM", "JWT", "Swagger", "Flutter"],
+    status: "Em desenvolvimento",
     repositoryUrl: "",
     demoUrl: "",
-    featured: true,
-    privateReason: "Projeto interno, sem exposição de modelos, dados ou layouts reais de identificação."
+    featured: false
+  },
+  {
+    title: "Consultas SQL e Validações Operacionais",
+    category: "Banco de Dados",
+    icon: "🗄️",
+    description: "Criação de consultas SQL para conferência, validação e apoio à tomada de decisão em rotinas operacionais.",
+    problem: "Necessidade de consultar dados de forma confiável para entender inconsistências, apoiar setores e validar informações do sistema.",
+    solution: "Construção de consultas SQL, análise de relacionamentos entre tabelas, filtros e regras de negócio para apoiar decisões técnicas e operacionais.",
+    technologies: ["SQL", "Oracle", "PostgreSQL", "MySQL", "Análise de Dados", "Banco de Dados"],
+    status: "Experiência profissional",
+    repositoryUrl: "",
+    demoUrl: "",
+    featured: false
   }
 ];
 
-const categories = ["Todos", "Web", "Mobile", "Backend", "Banco de Dados", "Automação", "Hospitalar"];
+const categories = ["Todos", "Mobile", "Web", "Backend", "Banco de Dados", "Automação", "Hospitalar"];
 
 const filtersContainer = document.querySelector("#project-filters");
 const projectsGrid = document.querySelector("#projects-grid");
@@ -149,15 +116,7 @@ function createElement(tag, className, textContent) {
 }
 
 function isProjectVisible(project) {
-  if (activeCategory === "Todos") {
-    return true;
-  }
-
-  if (activeCategory === "Banco de Dados") {
-    return project.category === "Banco de Dados" || project.technologies.some((tech) => tech.toLowerCase().includes("sql"));
-  }
-
-  return project.category === activeCategory;
+  return activeCategory === "Todos" || project.category === activeCategory;
 }
 
 function renderFilters() {
@@ -185,20 +144,18 @@ function renderFilters() {
 function createProjectCard(project) {
   const article = createElement("article", `project-card reveal${project.featured ? " featured" : ""}`);
 
-  const imageWrap = createElement("div", "project-image");
-  const image = document.createElement("img");
-  image.src = project.image;
-  image.alt = `Imagem do projeto ${project.title}`;
-  image.loading = "lazy";
-  image.addEventListener("error", () => {
-    image.classList.add("is-hidden");
-  });
+  const visual = createElement("div", "project-visual");
+  const icon = createElement("div", "project-icon", project.icon || "💻");
+  icon.setAttribute("aria-hidden", "true");
 
-  const placeholder = createElement("div", "project-placeholder", project.title);
-  imageWrap.append(image, placeholder);
+  const visualMeta = createElement("div", "project-visual-meta");
+  visualMeta.append(
+    createElement("strong", "", project.category),
+    createElement("span", "", project.featured ? "Destaque" : "Projeto técnico")
+  );
+  visual.append(icon, visualMeta);
 
   const body = createElement("div", "project-body");
-
   const meta = createElement("div", "project-meta");
   meta.append(
     createElement("span", "project-category", project.category),
@@ -207,7 +164,6 @@ function createProjectCard(project) {
 
   const title = createElement("h3", "", project.title);
   const description = createElement("p", "project-description", project.description);
-
   const problem = createProjectDetail("Problema", project.problem);
   const solution = createProjectDetail("Solução", project.solution);
 
@@ -234,11 +190,11 @@ function createProjectCard(project) {
   }
 
   if (!project.repositoryUrl && !project.demoUrl) {
-    links.appendChild(createElement("span", "", project.privateReason || "Projeto interno ou privado"));
+    links.appendChild(createElement("span", "", "Sem link público por sigilo ou contexto interno"));
   }
 
   body.append(meta, title, description, problem, solution, technologies, links);
-  article.append(imageWrap, body);
+  article.append(visual, body);
 
   return article;
 }
@@ -287,18 +243,6 @@ function setupBackToTop() {
   });
 }
 
-function setupImageFallbacks() {
-  document.querySelectorAll("img").forEach((image) => {
-    image.addEventListener("error", () => {
-      image.classList.add("is-hidden");
-    });
-
-    if (image.complete && image.naturalWidth === 0) {
-      image.classList.add("is-hidden");
-    }
-  });
-}
-
 function observeRevealElements() {
   const revealElements = document.querySelectorAll(".reveal:not(.is-visible)");
 
@@ -325,7 +269,6 @@ function init() {
   renderProjects();
   setupNavigation();
   setupBackToTop();
-  setupImageFallbacks();
   observeRevealElements();
 }
 

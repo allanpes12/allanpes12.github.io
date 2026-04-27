@@ -1,18 +1,20 @@
 # Portfólio Profissional - Allan Garcia
 
-Portfólio estático criado para GitHub Pages, com foco em apresentar a atuação profissional de Allan Garcia como Analista de Sistemas e Desenvolvedor Full Stack Pleno.
+Portfólio estático para GitHub Pages, criado para apresentar Allan Garcia como Analista de Sistemas e Desenvolvedor Full Stack Pleno, com foco em Flutter, Node.js, SQL, automações, integrações e experiência prática em ambiente hospitalar.
 
-O site destaca experiência prática em sistemas corporativos, ambiente hospitalar, desenvolvimento web/mobile, banco de dados, integrações e automações.
+O conteúdo foi escrito para destacar uma atuação técnica e honesta: desenvolvimento web/mobile, soluções internas, análise de dados, consultas SQL, relatórios/etiquetas no Report Designer e apoio a processos operacionais sem expor dados sensíveis.
 
 ## Tecnologias usadas
 
 - HTML5 semântico
 - CSS3 responsivo
 - JavaScript puro
-- GitHub Pages
 - Google Fonts via CDN
+- GitHub Pages
 
-## Estrutura do projeto
+Não há React, Next.js, Vite, dependências obrigatórias ou etapa de build.
+
+## Estrutura
 
 ```text
 /
@@ -21,83 +23,106 @@ O site destaca experiência prática em sistemas corporativos, ambiente hospital
 ├── script.js
 ├── README.md
 └── assets/
-    ├── profile.jpg
-    └── projects/
-        ├── app-rl-ponto.png
-        ├── inventario-ti.png
-        ├── logicamobilego.png
-        ├── webservice-nodejs-v2.png
-        ├── logicamobilego-v2.png
-        ├── promo-bot.png
-        ├── promo-site.png
-        └── app-card.png
+    └── curriculo-allan-garcia.pdf
 ```
 
 ## Como editar os projetos
 
-Os projetos ficam no arquivo `script.js`, dentro do array `projects`.
+Os projetos são carregados dinamicamente pelo arquivo `script.js`, no array `projects`.
 
-Cada projeto usa os campos:
+Cada projeto usa estes campos:
 
 - `title`: nome do projeto
 - `category`: categoria usada nos filtros
+- `icon`: ícone/emoji exibido no card
 - `description`: resumo do projeto
 - `problem`: problema resolvido
 - `solution`: solução aplicada
 - `technologies`: lista de tecnologias
 - `status`: status atual
-- `image`: caminho da imagem
-- `repositoryUrl`: link do repositório, quando público
+- `repositoryUrl`: link do repositório, quando puder ser público
 - `demoUrl`: link de demonstração, quando existir
 - `featured`: destaque visual no card
-- `privateReason`: texto exibido quando o projeto não tem link público
 
-Para adicionar um novo projeto, copie um objeto existente no array `projects`, cole abaixo e altere os dados.
+Para adicionar um projeto, copie um objeto existente dentro de `projects`, cole abaixo e altere os dados.
 
-## Como trocar imagens
+## Cards sem imagens
 
-- Foto profissional: substitua ou adicione a imagem em `assets/profile.jpg`.
-- Imagens dos projetos: coloque os arquivos em `assets/projects/`.
-- Atualize o campo `image` no `script.js` se usar outro nome de arquivo.
+Os cards não dependem de imagens reais. Cada card usa:
 
-Caso uma imagem não exista, o site exibe um fallback visual e continua funcionando.
+- Ícone grande
+- Gradiente técnico
+- Categoria
+- Status
+- Problema
+- Solução
+- Lista de tecnologias
 
-## Como editar contatos
+Essa abordagem evita expor prints internos, telas hospitalares, dados de pacientes, informações corporativas ou imagens de sistemas privados.
 
-No arquivo `index.html`, procure a seção `contato` e altere:
+## Como adicionar ou remover tecnologias
 
+As tecnologias visíveis da seção `Tecnologias` ficam no `index.html`.
+
+Procure pelos grupos:
+
+- `Frontend/Mobile`
+- `Backend`
+- `Banco de Dados`
+- `DevOps/Infra`
+- `Sistemas e Ambiente Hospitalar`
+- `Integrações`
+
+Edite os itens dentro de cada bloco `.chips`.
+
+## Como trocar links de contato
+
+No `index.html`, procure a seção `contato` e edite:
+
+- GitHub
+- Portfólio
 - Email
 - LinkedIn
 - WhatsApp
-- Link do currículo em PDF
 
-O botão de currículo aponta para:
+Os campos de email, LinkedIn e WhatsApp estão como placeholders para edição.
+
+## Como trocar o currículo
+
+O botão `Baixar currículo` aponta para:
 
 ```text
 assets/curriculo-allan-garcia.pdf
 ```
 
-Adicione o PDF nesse caminho ou altere o link no `index.html`.
+Substitua esse arquivo pelo currículo atualizado mantendo o mesmo nome, ou altere o link no `index.html`.
 
 ## Como publicar no GitHub Pages
 
-1. Acesse o repositório `allanpes12.github.io` no GitHub.
-2. Envie os arquivos `index.html`, `style.css`, `script.js`, `README.md` e a pasta `assets`.
-3. Abra `Settings`.
-4. Acesse `Pages`.
-5. Em `Build and deployment`, selecione:
+1. Envie os arquivos para o repositório `allanpes12.github.io`.
+2. Acesse `Settings` no GitHub.
+3. Entre em `Pages`.
+4. Em `Build and deployment`, escolha:
    - Source: `Deploy from a branch`
    - Branch: `main`
    - Folder: `/root`
-6. Salve as alterações.
-7. Acesse `https://allanpes12.github.io/` após a publicação.
+5. Salve.
+6. Acesse `https://allanpes12.github.io/` após o deploy.
 
-## Observação sobre projetos hospitalares
+## Segurança e privacidade
 
-Projetos e experiências ligados ao ambiente hospitalar devem usar descrições genéricas, dados fictícios e não devem expor nomes de pacientes, telas internas, credenciais, regras sigilosas ou informações sensíveis.
+Projetos ligados ao ambiente hospitalar devem ser apresentados de forma genérica.
 
-## Observação sobre repositórios privados
+Não exponha:
 
-Os projetos listados no portfólio podem permanecer sem link público quando contiverem credenciais, certificados, tokens, chaves de integração, URLs internas, dados operacionais ou regras de negócio sensíveis.
+- Nomes de pacientes
+- Dados de atendimento
+- Prints internos
+- Telas do MV
+- Consultas com dados reais
+- Credenciais
+- Chaves de API
+- URLs internas
+- Informações sigilosas de setores, regras ou integrações
 
-Antes de publicar qualquer repositório privado, crie uma cópia sanitizada, remova dados sensíveis e substitua configurações reais por exemplos como `.env.example`.
+Quando necessário, descreva apenas o problema, a abordagem técnica e o resultado operacional de forma segura.
